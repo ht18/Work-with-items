@@ -1,18 +1,15 @@
-class Receipt{
-    constructor(name, sugar, speculos, apple, cheese, tomatoe){ /* trying something with constructor */
-    this.name = name;
-    this.sugar = sugar;
-    this.speculos = speculos;
-    this.apple = apple;
-    this.cheese = cheese;
-    this.tomatoe = tomatoe;
+let receipts = [
+    {name:'Tiramisu', sugar:35, tomatoe:0, cheese:300, speculos:0, apple:0}, 
+    {name:'Cheesecake', sugar:35, tomatoe:0, cheese:300, speculos:10, apple:0},
+    {name:'Apple Pie', sugar:35,tomatoe:0, cheese:0, speculos:0, apple:4}
+]; 
+
+for (let receipt of receipts){
+    console.log(receipt.name);
 }
-}
 
-let applePie = new Receipt("Apple Pie", 300, 0, 0, 3, 0, 0);
-
-let cheeseCake = new Receipt("Cheesecake", 300, 2, 0, 0, 1, 0);
-
-let tiramisu = new Receipt("Tiramisu", 300, 0, 0, 0, 0)
-
-console.log(applePie.Receipt.speculos)
+/* autre possibilité :
+receipts.forEach(element => {
+    console.log(element.name);
+})
+*/
